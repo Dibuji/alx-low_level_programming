@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "name of file"
+read filename
+
+chmod u+x $filename
+
+echo "$filename is now executable"
