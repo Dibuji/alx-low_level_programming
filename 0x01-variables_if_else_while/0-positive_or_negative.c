@@ -3,10 +3,11 @@
 #include <time.h>
 
 /**
- *  Main - Positive anything is better than negative nothing
+ *  main - Positive anything is better than negative nothing
  *  Return: 0
  */
 
+/* betty style doc for function main goes there */
 int main(void)
 {
 	int n;
