@@ -2,6 +2,7 @@
 
 /**
  * _abs - compute absolute value
+ * @a: The number to be inputted
  * Return: absolute value
  */
 
