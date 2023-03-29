@@ -3,7 +3,7 @@
 /**
  * _strncpy - copy string
  * @dest: string
- * @@src: string
+ * @src: string
  * @n: string
  * Return: dest
  */
