@@ -4,7 +4,7 @@
  * mul - multiply two integers
  * @a: first integer
  * @b: second integer
- * Return: 0
+ * Return: n
  */
 
 int mul(int a, int b)
@@ -13,5 +13,5 @@ int mul(int a, int b)
 
 	n = a * b;
 
-return (0);
+return (n);
 }
