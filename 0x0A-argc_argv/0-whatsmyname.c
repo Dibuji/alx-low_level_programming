@@ -7,7 +7,7 @@
  * Return: 0
  */
 
-int main(int argc, char *argv[])
+int main(void __attribute__((unused)), char *argv[])
 {
 	char *i = argv[0];
 
