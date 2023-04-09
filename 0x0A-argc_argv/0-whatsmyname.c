@@ -8,10 +8,11 @@
  * Return: 0
  */
 
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
 	char *i = argv[0];
 
 	printf("%s\n", i);
+
 	return (0);
 }
