@@ -2,4 +2,11 @@
 
 /**
  * main - program that prints the number of arguments passed into it
- *
+ * @argc: number of arguments
+ * @argv: value of string
+ */
+
+int main(int argc, char **argv)
+{
+	printf("%d\n", argc);
+}
