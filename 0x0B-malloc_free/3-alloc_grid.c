@@ -14,17 +14,12 @@ int **alloc_grid(int width, int height)
 {
 	int i, j, **t;
 
-	if (width <= 0)
-	{
-		return (NULL);
-	}
-	if (height <= 0)
+	if (width <= 0 || height <= 0)
 	{
 		return (NULL);
 	}
 
 	/* Allocating memory for rows, which is defined as height */
-
 	t = malloc(sizeof(*t) * height);
 	if (t == NULL)
 	{
@@ -39,6 +34,11 @@ int **alloc_grid(int width, int height)
 		/* if it is NULL then it is a failure and question says, return NULL */
 		if (t[i] == NULL)
 		{
+			for (j = 0; j < i; j++)
+			{
+				free(t[j]);
+			}
+			free(t);
 			return (NULL);
 		}
 
