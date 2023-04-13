@@ -31,34 +31,23 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int len1, len2, i;
 
 	if (s1 == NULL)
-	{
 		s1 = "";
-	}
 	if (s2 == NULL)
-	{
 		s2 = "";
-	}
 
 	/* length of the two strings from the str_len function */
 	len1 = str_len(s1);
 	len2 = str_len(s2);
 
-	/**
-	 *  if requested number of bytes, n, is more than or equal to s2,
-	 *  then we dont needt to read the extras.
-	 */
+	/** if number of bytes, n, >= s2, then we dont need to read the extras */
 
 	if (n >= len2)
-	{
 		n = len2;
-	}
 
 	/* Allocating space for new string */
 	t = malloc(sizeof(*t) * (len1 + n + 1));
 	if (t == NULL)
-	{
 		return (NULL);
-	}
 
 	/* copy s1 into t */
 	for (i = 0; i < len1; i++)
