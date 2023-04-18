@@ -19,17 +19,3 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	d->age = age;
 	d->owner = owner;
 }
-
-/**
- * main - calling init_dog
- * Return: 0
- */
-
-int main(void)
-{
-	struct dog my_dog;
-
-	init_dog(&my_dog, "Poppy", 3.5, "Neymar");
-
-	return (0);
-}
