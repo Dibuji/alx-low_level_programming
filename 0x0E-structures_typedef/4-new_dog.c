@@ -12,8 +12,11 @@ int str_len(char *str)
 {
 	int len = 0;
 
-	while (str[len] != 0)
+	while (*str != 0)
+	{
 		len++;
+		str++;
+	}
 	return (len);
 }
 
@@ -42,13 +45,15 @@ void str_copy(char *str, char *dest)
  * @owner: Owner of dog
  * Return: newdog; NULL, if funtion fails
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
+	dog_t *new_dog;
 	char *newname, *newowner;
 	int len1, len2;
 
 	/* Allocate memory for new_dog struct */
-	dog_t *new_dog = malloc(sizeof(dog_t));
+	new_dog = malloc(sizeof(dog_t));
 
 	if (new_dog == NULL)
 		return (NULL);
@@ -63,7 +68,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(new_dog);
 			return (NULL);
 		}
-	str_copy(newname, name);
+	str_copy(name, newname);
 
 	newowner = malloc(sizeof(char) * (len2 + 1));
 		if (newowner == NULL)
@@ -72,7 +77,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 			free(new_dog);
 			return (NULL);
 		}
-	str_copy(newowner, owner);
+	str_copy(owner, newowner);
 
 	new_dog->name = newname;
 	new_dog->age = age;
