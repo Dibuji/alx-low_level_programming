@@ -26,7 +26,7 @@ int str_len(char *str)
 
 void str_copy(char *str, char *dest)
 {
-	while (str != 0)
+	while (*str != 0)
 	{
 		*dest = *str;
 		dest++;
