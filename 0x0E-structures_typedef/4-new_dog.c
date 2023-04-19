@@ -44,14 +44,16 @@ void str_copy(char *str, char *dest)
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *new_dog;
 	char *newname, *newowner;
 	int len1, len2;
 
-	new_dog = malloc(sizeof(dog_t));
+	/* Allocate memory for new_dog struct */
+	dog_t *new_dog = malloc(sizeof(dog_t));
+
 	if (new_dog == NULL)
 		return (NULL);
 
+	/* initialize values of len1 and len2 with length of name and owner */
 	len1 = str_len(name);
 	len2 = str_len(owner);
 
