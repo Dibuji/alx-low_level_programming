@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "lists.h"
 
@@ -11,9 +11,8 @@
 
 list_t *add_node(list_t **head, const char *str)
 {
-	unsigned int len = 0;
-
 	list_t *newnode;
+	unsigned int len = 0;
 
 	while (str[len])
 		len++;
