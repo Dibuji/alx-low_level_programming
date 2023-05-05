@@ -12,9 +12,9 @@ void print_binary(unsigned long int n)
 	int x;
 	int j = 0;
 
-	for (a = 63; a >= 0; a--)
+	for (x = 63; x >= 0; x--)
 	{
-		i = n >> a;
+		i = n >> x;
 
 		if (i & 1)
 		{
