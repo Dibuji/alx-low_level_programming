@@ -6,7 +6,7 @@
  * @key: the key
  * @value: value associated with key
  *
- * Description: Key and Value can't be empty stings. 
+ * Description: Key and Value can't be empty strings.
  * Also, value must be duplicated
  *
  * Return: 1 on success, 0 on failure.
@@ -19,7 +19,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || *key == '\0')
 		return (0);
-	
+
 	index = key_index((const unsigned char *)key, ht->size);
 
 	/* check if key already exists in hashtable */
