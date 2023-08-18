@@ -4,7 +4,7 @@
  * sum_dlistint - returns the sum of all the data (n) of a
  * doubly linked list
  *
- * @head - head of list
+ * @head: head of list
  * Return: sum of the data
  */
 
